@@ -262,7 +262,7 @@
                                 </div>
                             </div>
                             
-                            <p class="text-sm mt-4">Review the full <a href="#pricing" target="_blank" class="text-brand-purple underline">pricing details here</a> before selecting your ticket.</p>
+                            <p class="text-sm mt-4">Review the full <a href="#pricing" class="text-brand-purple underline">pricing details</a> before selecting your ticket.</p>
                         </section>
 
                         <section id="preferences" class="bg-white p-6 rounded-xl shadow-lg mt-6">
@@ -276,8 +276,8 @@
                                 <span class="text-sm text-gray-600 mt-1">Maximum 20 characters</span>
                             </div>
                             
-                            <div class="space-y-3 mt-4">
-                                <h4 class="text-xl font-medium mb-3">Dietary Needs</h4>
+                            <fieldset class="space-y-3 mt-4 border-0 p-0 m-0">
+                                <legend class="text-xl font-medium mb-3">Dietary Needs</legend>
                                 <div class="flex items-start space-x-3">
                                     <input type="radio" name="diet" id="diet-standard" value="standard" class="mt-1 h-4 w-4 text-brand-purple">
                                     <label for="diet-standard">Standard Meal</label>
@@ -286,11 +286,11 @@
                                     <input type="radio" name="diet" id="diet-vegan" value="vegan" class="mt-1 h-4 w-4 text-brand-purple">
                                     <label for="diet-vegan" class="flex-1">Vegan</label>
                                 </div>
-                                
-                                <div class="flex items-start space-x-3">
-                                    <input type="checkbox" id="email-updates" name="email-updates" class="h-5 w-5 text-brand-purple rounded"> 
-                                    <label for="email-updates">I want to receive weekly email updates.</label>
-                                </div>
+                            </fieldset>
+                            
+                            <div class="flex items-start space-x-3 mt-3">
+                                <input type="checkbox" id="email-updates" name="email-updates" class="h-5 w-5 text-brand-purple rounded"> 
+                                <label for="email-updates">I want to receive weekly email updates.</label>
                             </div>
 
                         </section>
