@@ -216,7 +216,7 @@
                             </div>
 
                             <div class="flex flex-col mb-4">
-                                <label for="company-name" class="mb-1 font-medium">Company Name</label>
+                                <label for="company-name" class="mb-1 font-medium required-field">Company Name</label>
                                 <input type="text" id="company-name" class="p-3 border border-gray-300 rounded-lg focus-ring-2 focus-ring-brand-purple" placeholder="Company Name">
                             </div>
 
@@ -278,7 +278,7 @@
                                 <h4 class="text-xl font-medium mb-3">Dietary Needs</h4>
                                 <div class="flex items-start space-x-3">
                                     <input type="radio" name="diet" id="diet-standard" value="standard" class="mt-1 h-4 w-4 text-brand-purple">
-                                    <span>Standard Meal</span>
+                                    <label for="diet-standard">Standard Meal</label>
                                 </div>
                                 <div class="flex items-start space-x-3">
                                     <input type="radio" name="diet" id="diet-vegan" value="vegan" class="mt-1 h-4 w-4 text-brand-purple">
@@ -286,25 +286,25 @@
                                 </div>
                                 
                                 <div class="flex items-start space-x-3">
-                                    <input type="checkbox" name="email-updates" class="h-5 w-5 text-brand-purple rounded"> 
-                                    <span>I want to receive weekly email updates.</span>
+                                    <input type="checkbox" id="email-updates" name="email-updates" class="h-5 w-5 text-brand-purple rounded"> 
+                                    <label for="email-updates">I want to receive weekly email updates.</label>
                                 </div>
                             </div>
 
                         </section>
 
                         <div class="flex items-center mt-6">
-                            <span class="block flex-grow text-center p-4 low-contrast-button font-bold rounded-lg cursor-pointer shadow-md hover-shadow-lg transition duration-200 text-lg"
+                            <button type="button" class="block flex-grow text-center p-4 low-contrast-button font-bold rounded-lg cursor-pointer shadow-md hover-shadow-lg transition duration-200 text-lg"
                                   onclick="register()">
                                   Register Now
-                            </span>
-                            
-                            <button class="bg-gray-300 p-4 ml-4 rounded-lg shadow-md" style="transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#9ca3af'" onmouseout="this.style.backgroundColor='#d1d5db'">
-                                <span style="color: #4b5563;">&#x270E;</span> 
                             </button>
                             
-                            <button class="bg-red-500 p-4 ml-4 rounded-lg shadow-md text-white" onclick="clearForm()" style="transition: background-color 0.2s;" onmouseover="this.style.backgroundColor='#dc2626'" onmouseout="this.style.backgroundColor='#ef4444'">
-                                &#x2715; 
+                            <button class="bg-gray-300 p-4 ml-4 rounded-lg shadow-md hover:bg-gray-400 transition duration-200" aria-label="Edit form">
+                                <span style="color: #4b5563;" aria-hidden="true">&#x270E;</span> 
+                            </button>
+                            
+                            <button class="bg-red-500 p-4 ml-4 rounded-lg shadow-md text-white hover:bg-red-600 transition duration-200" onclick="clearForm()" aria-label="Clear form">
+                                <span aria-hidden="true">&#x2715;</span>
                             </button>
                         </div>
                         <div id="reg-status" class="mt-4 text-center text-green-600 font-bold hidden text-lg"></div>
