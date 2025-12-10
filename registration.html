@@ -137,6 +137,18 @@
             border: none;
         }
 
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border-width: 0;
+        }
+
         @media (min-width: 640px) {
             .sm-px-6 { padding-left: 1.5rem; padding-right: 1.5rem; }
         }
@@ -202,7 +214,11 @@
         </div>
     </div>
 
-    <table class="w-full max-w-6xl mx-auto layout-table" id="reg-table">
+    <div class="max-w-6xl mx-auto px-4 mt-6">
+        <h2 class="text-3xl font-bold text-brand-purple mb-4 sr-only">Registration Form</h2>
+    </div>
+    
+    <table class="w-full max-w-6xl mx-auto layout-table" id="reg-table" role="presentation">
         <tbody>
             <tr>
                 <td class="align-top w-2-3">
@@ -245,9 +261,9 @@
                                 </select>
                             </div>
                             
-                            <label class="mb-3 font-medium block required-field">Select up to 3 preferred tracks: <span aria-label="required">*</span></label>
-
-                            <div id="track-list" class="space-y-2 border border-gray-300 p-3 rounded-lg">
+                            <fieldset class="mb-3">
+                                <legend class="font-medium required-field">Select up to 3 preferred tracks: <span aria-label="required">*</span></legend>
+                            <div id="track-list" class="space-y-2 border border-gray-300 p-3 rounded-lg mt-2">
                                 <div class="flex items-center space-x-2">
                                     <input type="checkbox" id="ai-ml" class="h-4 w-4 text-brand-purple rounded">
                                     <label for="ai-ml">AI & Machine Learning</label>
@@ -260,7 +276,7 @@
                                     <input type="checkbox" id="security" class="h-4 w-4 text-brand-purple rounded">
                                     <label for="security">Cyber Security</label>
                                 </div>
-                            </div>
+                            </fieldset>
                             
                             <p class="text-sm mt-4">Review the full <a href="#pricing" class="text-brand-purple underline">pricing details</a> before selecting your ticket.</p>
                         </section>
